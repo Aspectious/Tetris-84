@@ -1,0 +1,119 @@
+ClrHome
+ClrDraw
+AxesOff
+⁻10→Xmin
+10→Xmax
+⁻10→Ymin
+10→Ymax
+1→Yscl
+1→Xscl
+
+Line(⁻10,⁻8,⁻5,⁻8)
+Line(5,⁻8,10,⁻8)
+
+Line(⁻5,⁻8,⁻5,⁻10
+Line(5,⁻8,5,⁻10
+Text(57,5,"EXIT
+Text(57,75,"START
+Line(⁻10,10,10,10
+Line(⁻10,9.6774194,10,9.6774194
+
+Line(⁻3.1914894,10,⁻3.1914894,⁻10
+Line(3.1914894,10,3.1914894,⁻10
+
+Text(10,40,",
+Text(14,43,"84
+Text(24,33,"T E T R I S
+DelVar K
+
+
+
+0→S
+While S=0
+getKey→K
+
+If K=11
+Then
+1→S
+ClrDraw
+ClrHome
+End
+
+If K=13
+Then
+ClrDraw
+Text(0,0,"CONTROLS"
+
+Line(⁻10,⁻8,⁻5,⁻8)
+Line(⁻5,⁻8,⁻5,⁻10
+Text(57,5,"EXIT
+1→L
+
+While L=1
+getKey→K
+If K=11
+Then
+Return
+End
+End
+
+End
+
+If K=15
+Then
+
+ClrDraw
+
+Line(⁻10,⁻8,⁻5,⁻8)
+Line(5,⁻8,10,⁻8)
+
+Line(⁻5,⁻8,⁻5,⁻10
+Line(5,⁻8,5,⁻10
+Text(57,5,"EXIT
+Text(57,75,"MENU
+Line(⁻10,10,10,10
+Line(⁻10,9.6774194,10,9.6774194
+
+Line(⁻3.1914894,10,⁻3.1914894,⁻10
+Line(3.1914894,10,3.1914894,⁻10
+
+Text(31,36,"READY?
+Pause 
+
+
+ClrDraw
+
+Line(⁻10,⁻8,⁻5,⁻8)
+Line(5,⁻8,10,⁻8)
+
+Line(⁻5,⁻8,⁻5,⁻10
+Line(5,⁻8,5,⁻10
+Text(57,5,"EXIT
+Text(57,75,"MENU
+Line(⁻10,10,10,10
+Line(⁻10,9.6774194,10,9.6774194
+
+Line(⁻3.1914894,10,⁻3.1914894,⁻10
+Line(3.1914894,10,3.1914894,⁻10
+
+
+1→L
+While L=1
+
+ClrDraw
+
+RecallPic Pic0
+
+
+
+getKey→K
+
+If K=23
+Return
+End
+If K=11
+Stop
+End
+End
+
+End
