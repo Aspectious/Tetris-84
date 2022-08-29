@@ -1,0 +1,35 @@
+'84 Tetris Screen Dimentions
+Board is at X=-5 and X=5
+
+46 Columns for pieces?
+
+
+-+3.1914894 (Gets us walls for Tetris with 3x3 pieces
+10 & 9.6774194 Y Offset for perfect 10x20 Board
+
+
+Optimization with Lists
+
+List Format to keep track of pieces
+* Each Tetris piece uses 4 points to keep track of it. These 4 points can be stored in 8 bytes in the LISTS.
+Format:
+{X1,Y1,X2,Y2,X3,Y3,X4,Y4)
+Check if any points are within boundries to register a collision hull.
+
+
+List Format to Encode Piece Shapes
+Format:
+{
+
+Controls
+
+Title Screen
+
+Y=(K11) is QUIT
+GRAPH(K15) is START/MENU
+Up Arrow(K25) is ROTATE RIGHT
+Down Arrow(K34) is DOWN
+Left ARrow(K24) is LEFT
+Right Arrow(K26) is RIGHT
+DEL (K23) IS  HOLD
+STAT (K33) is SLAM
