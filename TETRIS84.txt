@@ -1,3 +1,4 @@
+Lbl RS
 ClrHome
 ClrDraw
 AxesOff
@@ -9,111 +10,174 @@ AxesOff
 1→Xscl
 
 Line(⁻10,⁻8,⁻5,⁻8)
-Line(5,⁻8,10,⁻8)
-
 Line(⁻5,⁻8,⁻5,⁻10
-Line(5,⁻8,5,⁻10
 Text(57,5,"EXIT
-Text(57,75,"START
-Line(⁻10,10,10,10
-Line(⁻10,9.6774194,10,9.6774194
 
-Line(⁻3.1914894,10,⁻3.1914894,⁻10
-Line(3.1914894,10,3.1914894,⁻10
+Line(⁻4,⁻8,⁻4,⁻10
+Line(4,⁻8,4,⁻10
+Line(⁻4,⁻8,4,⁻8
+Text(57,32,"CONTROLS
+
+
+Line(5,⁻8,10,⁻8)
+Line(5,⁻8,5,⁻10
+Text(57,75,"START
 
 Text(10,40,",
 Text(14,43,"84
-Text(24,33,"T E T R I S
+Text(24,34,"T E T R I S
+
 DelVar K
+DelVar A
+DelVar B
+DelVar C
+DelVar D
+DelVar E
+DelVar F
+DelVar G
+DelVar H
 
 
-
-0→S
-While S=0
+Lbl ML
+1→S
+While S=1
 getKey→K
 
 If K=11
 Then
-1→S
 ClrDraw
 ClrHome
+Stop
 End
 
 If K=13
 Then
 ClrDraw
 Text(0,0,"CONTROLS"
-
 Line(⁻10,⁻8,⁻5,⁻8)
 Line(⁻5,⁻8,⁻5,⁻10
 Text(57,5,"EXIT
 1→L
-
 While L=1
 getKey→K
 If K=11
 Then
-Return
+Goto RS
 End
 End
-
 End
 
 If K=15
 Then
 
+Lbl RD
 ClrDraw
-
 Line(⁻10,⁻8,⁻5,⁻8)
 Line(5,⁻8,10,⁻8)
-
 Line(⁻5,⁻8,⁻5,⁻10
 Line(5,⁻8,5,⁻10
 Text(57,5,"EXIT
 Text(57,75,"MENU
 Line(⁻10,10,10,10
 Line(⁻10,9.6774194,10,9.6774194
-
 Line(⁻3.1914894,10,⁻3.1914894,⁻10
-Line(3.1914894,10,3.1914894,⁻10
-
+Line(3.4042553,10,3.4042553,⁻10
 Text(31,36,"READY?
 Pause 
 
-
 ClrDraw
-
 Line(⁻10,⁻8,⁻5,⁻8)
 Line(5,⁻8,10,⁻8)
-
 Line(⁻5,⁻8,⁻5,⁻10
 Line(5,⁻8,5,⁻10
 Text(57,5,"EXIT
 Text(57,75,"MENU
 Line(⁻10,10,10,10
 Line(⁻10,9.6774194,10,9.6774194
-
 Line(⁻3.1914894,10,⁻3.1914894,⁻10
-Line(3.1914894,10,3.1914894,⁻10
+Line(3.4042553,10,3.4042553,⁻10
 
+
+0→T
+50→U
+
+
+⁻1*(20/96)→A
+10→B
+
+DelVar K
 
 1→L
 While L=1
 
-ClrDraw
+While T=U
+Line(⁻10,10,10,10
+Line(⁻10,9.6774194,10,9.6774194
 
-RecallPic Pic0
+If B-(2(20/96))≤⁻10
+Then
+Pt-On(A,B,2
+Pt-On(A,B,1
+⁻1*(20/96)→A
+10→B
+End
+Pt-Off(A,B,2
+Pt-Off(A,B,1
+B-((20/64)*3)→B
+Pt-On(A,B,2
+Pt-On(A,B,1
+U+50→U
 
+End
 
+While T≠U
+T+1→T
+End
 
 getKey→K
+Text(0,0,K)
 
-If K=23
-Return
-End
 If K=11
+Then
 Stop
 End
+
+If K=15
+Then
+Pause 
 End
 
+If K=23
+Then
+Pause 
+End
+
+If K=24
+Then
+If A>⁻2.553191
+Then
+Pt-Off(A,B,2
+Pt-Off(A,B,1
+A-((20/96)*3)→A
+End
+End
+If K=26
+Then
+If A<2.7659575
+Then
+Pt-Off(A,B,2
+Pt-Off(A,B,1
+A+((20/96)*3)→A
+End
+End
+
+If K=25
+Then
+End
+
+End
+
+End
+
+End
 End
